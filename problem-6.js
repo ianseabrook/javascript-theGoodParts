@@ -24,6 +24,12 @@ function curry(binary, a) {
     return applyf(binary) (a);
 }
 
+function curry(func, ...first) {
+    return function (...second) {
+        return func(...first, ...second);
+    };
+}
+
 */
 
 function curry(binary, a) {
